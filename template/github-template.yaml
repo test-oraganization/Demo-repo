@@ -4,7 +4,7 @@ pool:
   # Define your agent pool
 
 variables:
-  # Define any variables needed for the PR creation
+  # Define any variables needed for the PR creationndkdk dkdk
 
 steps:
 - task: shayki.createpullrequest@1  # Replace 1 with the extension version
