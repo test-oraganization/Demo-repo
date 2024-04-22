@@ -3,12 +3,12 @@ trigger: none  # Change this trigger as needed
 pool:
   vmImage: ubuntu-latest
 
-  
+
 steps:
 - task: createpullrequest@1  # Replace 1 with the extension version
   inputs:
     connection: test-oraganization  # Replace with your GitHub connection name
-    title: ${{ var.prTitle }}  # PR title (can be dynamic using variables)
+    title: "hello its a new pR "  # PR title (can be dynamic using variables)
     description: "hello this the new pR" # PR description (can be dynamic)
     targetBranch: main  # Target branch for the PR
     sourceBranch: feature/testing  # Source branch for the PR
