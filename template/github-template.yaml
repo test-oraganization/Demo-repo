@@ -7,11 +7,10 @@ variables:
   # Define any variables needed for the PR creation
 
 steps:
-- task: shayki.createpullrequest@1  # Replace 1 with the extension version
+- task: createpullrequest@1  # Replace 1 with the extension version
   inputs:
-    connection: your-github-connection  # Replace with your GitHub connection name
+    connection: test-oraganization  # Replace with your GitHub connection name
     title: ${{ var.prTitle }}  # PR title (can be dynamic using variables)
-    description: ${{ var.prDescription }}  # PR description (can be dynamic)
+    description: "hello this the new pR" # PR description (can be dynamic)
     targetBranch: main  # Target branch for the PR
-    sourceBranch: feature/my-branch  # Source branch for the PR
-     reviewers: reviewer1, reviewer2  # Comma-separated list of reviewers (optional)
+    sourceBranch: feature/testing  # Source branch for the PR
