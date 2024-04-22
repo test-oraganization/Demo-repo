@@ -1,11 +1,9 @@
 trigger: none  # Change this trigger as needed
 
 pool:
-  # Define your agent pool
+  vmImage: ubuntu-latest
 
-variables:
-  # Define any variables needed for the PR creation
-
+  
 steps:
 - task: createpullrequest@1  # Replace 1 with the extension version
   inputs:
