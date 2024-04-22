@@ -5,10 +5,11 @@ pool:
 
 
 steps:
-- task: createpullrequest@1  # Replace 1 with the extension version
-  inputs:
-    connection: test-oraganization  # Replace with your GitHub connection name
-    title: "hello its a new pR "  # PR title (can be dynamic using variables)
-    description: "hello this the new pR" # PR description (can be dynamic)
-    targetBranch: main  # Target branch for the PR
-    sourceBranch: feature/testing  # Source branch for the PR
+
+- script: |  # Script block to use git commands
+    git config user.name ${{ user.name }}
+    git config user.email ${{ user.email }}
+    git clone https://github.com/test-oraganization/Demo-repo.git
+    cd Demo-repo
+    git checkout -b feature/testing  # Branch name can be dynamic
+    git push --set-upstream origin feature/testing
