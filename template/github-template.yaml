@@ -7,8 +7,8 @@ pool:
 steps:
 
 - script: |  # Script block to use git commands
-    git config user.name ${{ user.name }}
-    git config user.email ${{ user.email }}
+    git config --global  user.name "dEMopoc17"
+    git config --global  user.email "demo.257.257@gmail.com"
     git clone https://github.com/test-oraganization/Demo-repo.git
     cd Demo-repo
     git checkout -b feature/testing  # Branch name can be dynamic
